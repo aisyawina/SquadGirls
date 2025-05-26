@@ -1,6 +1,9 @@
-<div align="Left">
-  
-## Squad Girls  
+<p align="center">
+ <img src="Data Source/Logo IPB University_Horizontal.png" width=auto height=auto alt="IPB University" />
+ <h2 align="center">LAPORAN PRAKTIKUM STATISTIKA MACHINE LEARNING</h2>
+<p align="center">Dibuat Oleh: Squad Girls Group</p>
+
+
 # Optimalisasi Alokasi Fiskal dalam Peningkatan Pembangunan Manusia Menuju Indonesia Emas 2045
 ## Deskripsi Proyek
 Repositori ini merupakan bagian dari tugas akhir mata kuliah Statistika Machine Learning, yang bertujuan menganalisis efektivitas alokasi fiskal antarprovinsi dalam meningkatkan Indeks Pembangunan Manusia (IPM) dan mengentaskan kemiskinan (Desil 1), dalam kerangka visi Indonesia Emas 2045
@@ -20,7 +23,7 @@ Proyek ini bertujuan untuk:
   yang akan dijadikan dasar rekomendasi kebijakan fiskal untuk mewujudkan visi Indonesia Emas 2045.
 
 ## Sumber Data 
-1. Sumber data: Satu Data (data.go.id), 
+1. Sumber data: Satu Data <a href="https://data.go.id/dataset/dataset/total-apbn-tahun-berjalan"> (data.go.id/APBN_2024)</a> , 
 2. Indeks Pembangunan Manusia 2024 (bps.go.id), 
 3. Data Demografi Kesejahteraan Masyarakat-Desil 1 (data-go.id)
 
