@@ -22,7 +22,7 @@ Proyek ini bertujuan untuk:
 - Mengklasifikasikan provinsi ke dalam kategori efektif atau tidak efektif dalam penggunaan fiskal, menggunakan pendekatan Tree-Based Classification (CART & Random Forest),
   yang akan dijadikan dasar rekomendasi kebijakan fiskal untuk mewujudkan visi Indonesia Emas 2045.
 
-## Sumber Data 
+## Sumber Data Primer
 1. Sumber data: Satu Data <a href="https://data.go.id/dataset/dataset/total-apbn-tahun-berjalan"> (data.go.id/APBN_2024)</a> , 
 2. Indeks Pembangunan Manusia 2024 (bps.go.id), 
 3. Data Demografi Kesejahteraan Masyarakat-Desil 1 (data-go.id)
@@ -33,8 +33,8 @@ Proyek ini bertujuan untuk:
 - Jumlah keluarga dan individu (penduduk) dan jumlah Desil1 (Individu miskin desil 1) => Variabel Predictor
 - Efectivitas Label (yes/no) => Variabel Target
 
-  Link Data :
-  https://bit.ly/4kfnyOm
+  Link Data Sekunder yang sudah digabung :
+  <a href="Data Source/data1.csv"> Klik dan Lihat Data Berikut! </a>
 
   
 ## Algoritma Machine Learning yang Di Pilih
@@ -57,14 +57,13 @@ Proyek ini bertujuan untuk:
    </p>
    
 ## Work Flow
-1. CART
-   https://bit.ly/3HbjrUK
+CART vs Random Forest
+  Project kami memiliki metode penelitian berikut, dimana kami memiliki proses "Data Preparation/Gathering/Collection", "PreProcessing dan Feature Engineering", "Modelling", "Evaluation & Conclusion"
+   <p><img src="Workflow/Flowchart CART vs Random Forest.PNG" alt="" width="600px"/></p>
    
-2. Random Forest
-   https://bit.ly/3H7Fs6T 
-
 ## Detail Coding 
-https://bit.ly/43xZv62
+Bisa didapatkan teknis coding sesuai urutan workflow di atas pada <a href="Project_UAS_Kelompok_Squad_Gilrs rev 2 (2).ipynb"> file.ipynb </a> berikut
+
 
 ## Hasil Akurasi
 
@@ -79,11 +78,12 @@ Model CART terbukti lebih unggul dalam mengklasifikasikan efektivitas penggunaan
 
 - Features Importance
   
-  https://bit.ly/45oxpg3
+  <img width="262" alt="image" src="Data Source/Features Importances.png" />
   
 - Tree Plot
-  
-  https://bit.ly/43cCYNg
+
+  <img width="262" alt="image" src="Data Source/Tree Plot.png" />
+
 
  <p align="JUSTIFY"> 
 Model CART menunjukkan bahwa fitur paling dominan dalam klasifikasi adalah IPM, yang menandakan fokus utama pada outcome sosial. Hal ini tercermin dari tree-plot yang menunjukkan pembagian keputusan pertama berdasarkan nilai IPM_2024 dengan threshold 73.08. Sebaliknya, model Random Forest lebih menekankan pada input finansial, dengan PAGU_prov sebagai indikator utama efektivitas kebijakan fiskal, terutama pada provinsi dengan anggaran di bawah 9,1 triliun, sehingga lebih menyoroti besaran alokasi dana dibandingkan hasil sosialnya.
