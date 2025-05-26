@@ -6,7 +6,10 @@
 Repositori ini merupakan bagian dari tugas akhir mata kuliah Statistika Machine Learning, yang bertujuan menganalisis efektivitas alokasi fiskal antarprovinsi dalam meningkatkan Indeks Pembangunan Manusia (IPM) dan mengentaskan kemiskinan (Desil 1), dalam kerangka visi Indonesia Emas 2045
 
 ## Latar Belakang
+<p align="JUSTIFY">
 Visi Indonesia Emas 2045 menekankan pentingnya pertumbuhan inklusif dan berkelanjutan. Namun, tantangan fiskal nasional yang dihadapi adalah ketimpangan antarprovinsi dalam hal alokasi dan efektivitas penggunaan anggaran. Oleh karena itu, urgensi mengarahkan fiskal ke outcome nyata seperti peningkatan Indeks Pembangunan Manusia (IPM) dan pengentasan kemiskinan menjadi sangat penting. Fakta menunjukan bahwa Distribusi IPM antarprovinsi menunjukkan bahwa sebagian besar provinsi memiliki IPM antara 70–75, namun terdapat beberapa provinsi dengan IPM sangat rendah (<60) dan sangat tinggi (>80). Ini mengindikasikan adanya ketimpangan pembangunan manusia yang cukup tajam antarwilayah. Meskipun ada beberapa wilayah provinsi memiliki alokasi fiskal (PAGU APBN) cukup besar, tidak semua menunjukkan peningkatan signifikan pada IPM. Hal ini menandakan perlunya klasifikasi efektivitas penggunaan anggaran berbasis data sebagai dasar penyusunan kebijakan yang lebih tepat sasaran.
+ 
+</p>
 
 ## Tujuan Penelitian
 Proyek ini bertujuan untuk:
@@ -28,48 +31,96 @@ Proyek ini bertujuan untuk:
 - Efectivitas Label (yes/no) => Variabel Target
 
   Link Data :
-  https://github.com/aisyawina/SquadGirls/blob/main/data1.csv
+  https://bit.ly/4kfnyOm
+
   
 ## Algoritma Machine Learning yang Di Pilih
+
 1. CART
+   <p align="JUSTIFY">
    CART (Classification and Regression Tree) dipilih karena cocok digunakan pada data yang kecil dan terstruktur, mampu memberikan performa akurat tanpa memerlukan jumlah
    data besar serta menjelaskan logika klasifikasi fiskal secara jelas. Metode ini juga mudah diinterpretasikan karena memiliki struktur pohon keputusan yang visual dan
    logis, sehingga memudahkan dalam menjelaskan faktor-faktor yang menyebabkan suatu provinsi diklasifikasikan sebagai “efektif” atau “tidak efektif” dalam penggunaan
    anggaran. Selain itu, CART mampu menangani data numerik dan kategorikal hasil encoding tanpa memerlukan asumsi distribusi tertentu seperti normalitas, menjadikannya
    fleksibel untuk analisis data sosial ekonomi.
-2. Random Forest
+   </p>
+   
+3. Random Forest
+   <p align="JUSTIFY">
    Random Forest (RF) dipilih karena memberikan performa yang lebih stabil dan akurat dibandingkan CART, dengan membangun banyak pohon dan menggabungkan hasilnya melalui
    teknik bagging. Model ini juga mampu mengukur pentingnya fitur secara kuantitatif (feature importance), sehingga membantu dalam memahami variabel mana yang paling
    berpengaruh dalam klasifikasi. Selain itu, RF tahan terhadap outlier dan variasi data (noise), karena menggunakan banyak pohon, menjadikannya sangat cocok untuk
    menganalisis data sosial ekonomi provinsi yang kompleks
+   </p>
    
 ## Work Flow
 1. CART
-   https://github.com/aisyawina/SquadGirls/blob/main/Workflow_CART%20Diagram.png
+   https://bit.ly/3HbjrUK
    
 2. Random Forest
-  https://github.com/aisyawina/SquadGirls/blob/main/Workflow_Random%20Forest%20(RF)%20Diagram.png
+   https://bit.ly/3H7Fs6T 
 
 ## Detail Coding 
-https://github.com/aisyawina/SquadGirls/blob/main/Project_UAS_Kelompok_Squad_Girls.html
+https://bit.ly/43xZv62
 
 ## Hasil Akurasi
+
+
 <img width="262" alt="image" src="https://github.com/user-attachments/assets/5cadf85a-18b6-4f39-834c-f0b7ea62b465" />
 
+<p align="JUSTIFY">
 Model CART terbukti lebih unggul dalam mengklasifikasikan efektivitas penggunaan anggaran antarprovinsi berdasarkan hasil evaluasi model. Sementara itu, Random Forest cenderung menghasilkan lebih banyak kesalahan klasifikasi, sehingga akurasi dan F1-Score-nya lebih rendah dibandingkan CART menurut confusion matrix. Namun, berdasarkan grafik performa dari 30 kali perulangan, Random Forest (sebagai model ensemble) menunjukkan performa yang lebih stabil karena menggabungkan rata-rata dari banyak model, sedangkan CART sebagai model pohon tunggal lebih sensitif terhadap variasi data.
+</p>
 
+## Insight
+
+- Features Importance
+  
+  https://bit.ly/45oxpg3
+  
+- Tree Plot
+  
+  https://bit.ly/43cCYNg
+
+ <p align="JUSTIFY"> 
+Model CART menunjukkan bahwa fitur paling dominan dalam klasifikasi adalah IPM, yang menandakan fokus utama pada outcome sosial. Hal ini tercermin dari tree-plot yang menunjukkan pembagian keputusan pertama berdasarkan nilai IPM_2024 dengan threshold 73.08. Sebaliknya, model Random Forest lebih menekankan pada input finansial, dengan PAGU_prov sebagai indikator utama efektivitas kebijakan fiskal, terutama pada provinsi dengan anggaran di bawah 9,1 triliun, sehingga lebih menyoroti besaran alokasi dana dibandingkan hasil sosialnya.
+</p>
+
+## Kesimpulan dan Rekomendasi
+<p align="JUSTIFY">
+Berdasarkan temuan, anggaran besar tidak selalu berbanding lurus dengan peningkatan kualitas hidup (IPM), terbukti dari beberapa provinsi dengan alokasi anggaran besar namun dikategorikan tidak efektif. Model CART dinilai lebih cocok untuk mengevaluasi efektivitas jangka pendek berdasarkan IPM, sementara Random Forest lebih sesuai untuk tujuan jangka panjang karena stabil dan tidak bias terhadap daerah kaya. Penggunaan model statistik berbasis machine learning disarankan untuk mendukung pengambilan keputusan yang lebih akurat dan tepat sasaran. Pemerintah direkomendasikan memprioritaskan daerah dengan IPM rendah dan jumlah penduduk miskin tinggi untuk mengejar ketertinggalan pembangunan.
+</p>
+
+## PPT 
+Presentasi dalam bentuk power point dapat dilihat disini :
+
+https://bit.ly/3Hen38x
+
+
+## Laporan Akhir
+
+https://bit.ly/3HrbSJF
+
+
+
+## Reels di Sosmed
+Bantu likes and comment ya gaes :)
+
+
+https://www.instagram.com/reel/DKHXXPWSacL/?igsh=MWp2NnU2ZmhuajJuZg==
+
+## Video 
+link video dapat dilihat di sini :
+
+https://bit.ly/4ktMzow
 
 
 ## Penulis
-- Nama kamu
+- Riza Rahmah Angelia ( M0501241008 )
+- Aisya Wina Wahda (M0501241053)
+- Latifah Zahra (M0501241075)
+- Sely F Wakhidah (M0501241038) 
 
-<p align="center">
-  <strong>Tulisan ini di tengah</strong>
-</p>
-
-<p align="center">
-  <img src="https://example.com/logo.png" width="200" alt="Logo Proyek">
-</p>
 
 <p align="center">
   <strong>Selamat datang di Proyek Kami!</strong><br>
